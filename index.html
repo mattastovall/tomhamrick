@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Office of Thomas W. Hamrick - Texas Insurance & Litigation Attorney</title>
+    <meta name="description" content="Experienced Texas insurance and litigation attorney. Thomas W. Hamrick helps clients with storm damage claims, injury cases, and commercial litigation.">
+    <meta name="keywords" content="Texas storm damage lawyer, property insurance attorney, Dallas insurance claims, Thomas Hamrick attorney">
+    <meta property="og:title" content="Law Office of Thomas W. Hamrick - Texas Insurance & Litigation Attorney">
+    <meta property="og:description" content="Over 30 years of legal experience helping Texans recover insurance and litigation damages. Contact Thomas W. Hamrick today.">
+    <meta property="og:image" content="https://tomhamrick.s3.us-east-2.amazonaws.com/TomHamrick-at-Law.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;700&family=Roboto+Flex:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+        }
+
+        .container {
+                max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .wide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Navigation */
+        .header-nav {
+            background: #fff;
+            padding: 24px 0;
+            max-width: 90vw;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 36px;
+            max-width: 90vw;
+        }
+
+        .nav-item {
+            color: #000;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
+                        linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
+                        url('https://tomhamrick.s3.us-east-2.amazonaws.com/DFW_Skyline_01_Cropped.png') center/cover no-repeat;
+            min-height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .hero-name {
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 64px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+
+        .hero-address {
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 80px;
+        }
+
+        /* About Section */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+            padding-top: 330px;
+            padding-bottom: 220px;
+
+        }
+
+        .about-text {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .about-image-container {
+            text-align: left;
+            max-width: 800px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .about-caption {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        /* Content Sections */
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: 1.2;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.1s ease;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title:hover {
+            color: #666;
+        }
+        
+        .section-title-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+        
+        .section-title::before {
+            content: '+';
+            font-size: 40px;
+            font-weight: 400;
+            transition: transform 0.1s ease;
+            margin-right: 20px;
+        }
+        
+        .section-title-wrapper.expanded .section-title::before {
+            content: '−';
+        }
+
+        .section-text {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 32px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.1s ease-out;
+        }
+        
+        .section-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.1s ease-in;
+        }
+
+        .feature-item {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .link-text {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .link-text:hover {
+            color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .footer-item {
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-name {
+                font-size: 48px;
+            }
+            
+            .hero-title, .hero-subtitle {
+                font-size: 24px;
+            }
+            
+            .hero-address {
+                font-size: 20px;
+            }
+            
+            .about-text {
+                font-size: 32px;
+            }
+            
+            .about-caption {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .section-text, .feature-item {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container, .wide-container {
+                padding: 0 16px;
+            }
+            
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+                min-height: 500px;
+            }
+            
+            .hero-name {
+                font-size: 36px;
+            }
+            
+            .hero-title, .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            .hero-address {
+                font-size: 16px;
+            }
+            
+            .about-text {
+                font-size: 24px;
+            }
+            
+            .about-caption {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .section-title::before {
+                font-size: 24px;
+            }
+            
+            .section-text, .feature-item {
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                gap: 30px;
+            }
+            
+            .footer-item {
+                font-size: 14px;
+            }
+            
+            .nav-content {
+                gap: 20px;
+            }
+            
+            .nav-item {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-name {
+                font-size: 28px;
+            }
+            
+            .hero-title, .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .hero-address {
+                font-size: 14px;
+            }
+            
+            .about-text {
+                font-size: 20px;
+            }
+            
+            .about-caption {
+                font-size: 12px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .section-title::before {
+                font-size: 20px;
+            }
+            
+            .section-text, .feature-item {
+                font-size: 16px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-item {
+                font-size: 12px;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header-nav">
+        <div class="nav-container">
+            <nav class="nav-content">
+                <a href="#" class="nav-item">ARTICLES</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">LAW OFFICE OF</h1>
+            <h2 class="hero-name">Thomas W. Hamrick</h2>
+            <h3 class="hero-subtitle">Texas Insurance & Litigation Attorney</h3>
+            <p class="hero-address">3600 S 20th Avenue, DFW Airport, TX 75261</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="wide-container">
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-text">
+                    With over three decades of legal experience, Tom has built a reputation for aggressive advocacy, practical strategy, and proven results.
+                </div>
+                <div class="about-image-container">
+                    <img src="https://tomhamrick.s3.us-east-2.amazonaws.com/TomHamrick-at-Law.png" alt="Attorney Thomas W. Hamrick" class="about-image">
+                    <p class="about-caption">
+                        Attorney Thomas W. Hamrick has been advocating for clients since 1989, beginning his career with a nationally respected law firm in Houston.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <!-- Storm Damage Section -->
+            <section class="content-section">
+                <div class="section-title-wrapper" onclick="toggleSection(this)">
+                    <h2 class="section-title">Texas Storm Damage and<br>Property Insurance Claim Lawyer</h2>
+                </div>
+                <div class="section-content">
+                    <p class="section-text">
+                        Tom Hamrick is recognized as an authority on property insurance appraisals, particularly in cases involving hail, hurricane, or windstorm damage. He trains former Texas judges for roles as umpires in insurance claim appraisals, underlining his standing as a thought leader in this niche legal field.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Why Choose Section -->
+            <section class="content-section">
+                <div class="section-title-wrapper" onclick="toggleSection(this)">
+                    <h2 class="section-title">Why Choose Thomas W. Hamrick?</h2>
+                </div>
+                <div class="section-content">
+                    <div class="feature-list">
+                        <div class="feature-item">• Trusted Legal Advocate: Known for integrity, results, and personalized service.</div>
+                        <div class="feature-item">• Specialist in Storm Damage Claims: Insight into insurer tactics and how to fight them.</div>
+                        <div class="feature-item">• Educator & Trainer: Provides training to former judiciary on appraisal law.</div>
+                        <div class="feature-item">• Depth of Legal Experience: Decades of trial and settlement success.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Legal Resources Section -->
+            <section class="content-section">
+                <div class="section-title-wrapper" onclick="toggleSection(this)">
+                    <h2 class="section-title">Explore Legal Resources</h2>
+                </div>
+                <div class="section-content">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            We provide free educational resources to help you understand common insurance coverage issues and the appraisal process.
+                        </div>
+                        <div class="feature-item">
+                            👉 <span class="link-text">Click here to view articles and guides on coverage and appraisals.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="content-section">
+                <div class="section-title-wrapper" onclick="toggleSection(this)">
+                    <h2 class="section-title">Schedule a Consultation Today</h2>
+                </div>
+                <div class="section-content">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            If you're dealing with a denied or delayed storm damage insurance claim, or need representation for a serious legal issue, contact the Law Office of Thomas W. Hamrick today. Get clarity, support, and results from an experienced Texas attorney.
+                        </div>
+                        <div class="feature-item">
+                            Call <strong>(214) 396-7676</strong> or email <a href="mailto:hamricklaw@gmail.com">hamricklaw@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-item">LAW OFFICE OF THOMAS W. HAMRICK</div>
+                <div class="footer-item">DALLAS, TX</div>
+                <div class="footer-item">(214) 396-7676</div>
+                <div class="footer-item">hamricklaw@gmail.com</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSection(titleElement) {
+            const content = titleElement.nextElementSibling;
+            const isExpanded = content.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapse
+                content.classList.remove('expanded');
+                titleElement.classList.remove('expanded');
+            } else {
+                // Expand
+                content.classList.add('expanded');
+                titleElement.classList.add('expanded');
+            }
+        }
+    </script>
+</body>
+</html>
