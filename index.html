@@ -12,6 +12,28 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourdomain.com/">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;700&family=Roboto+Flex:wght@400;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Law Office of Thomas W. Hamrick",
+      "image": "https://tomhamrick.s3.us-east-2.amazonaws.com/TomHamrick-at-Law.png",
+      "url": "https://yourdomain.com",
+      "telephone": "(214) 396-7676",
+      "email": "hamricklaw@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3600 S 20th Avenue",
+        "addressLocality": "DFW Airport",
+        "addressRegion": "TX",
+        "postalCode": "75261",
+        "addressCountry": "US"
+      },
+      "areaServed": "Texas",
+      "priceRange": "$$$",
+      "legalName": "Thomas W. Hamrick"
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -124,6 +146,8 @@
 
         .content-section {
             margin-bottom: 80px;
+            margin-left: 64px;
+            margin-right: 64px;
         }
 
         /* About Section */
@@ -203,12 +227,18 @@
             font-weight: 400;
             line-height: 1.4;
             margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: 48px;
         }
 
         .feature-list {
             display: flex;
             flex-direction: column;
             gap: 16px;
+            max-width: 1200px;
+            margin-left: 48px;
+
+
         }
         
         .section-content {
@@ -411,7 +441,8 @@
     <header class="header-nav">
         <div class="nav-container">
             <nav class="nav-content">
-                <a href="#" class="nav-item">ARTICLES</a>
+                <a href="https://tomhamrick.wordpress.com/" class="nav-item" target="_blank" rel="noopener noreferrer">ARTICLES</a>
+                <a href="#contact" class="nav-item" onclick="scrollToContact(event)">CONTACT</a>
             </nav>
         </div>
     </header>
@@ -451,7 +482,7 @@
                 </div>
                 <div class="section-content">
                     <p class="section-text">
-                        Tom Hamrick is recognized as an authority on property insurance appraisals, particularly in cases involving hail, hurricane, or windstorm damage. He trains former Texas judges for roles as umpires in insurance claim appraisals, underlining his standing as a thought leader in this niche legal field.
+                        Tom Hamrick is recognized as an authority on property insurance appraisals, particularly in cases involving hail, hurricane, or windstorm damage. <br><br> He trains former Texas judges for roles as umpires in insurance claim appraisals, underlining his standing as a thought leader in this niche legal field.
                     </p>
                 </div>
             </section>
@@ -489,14 +520,14 @@
             </section>
 
             <!-- Contact Section -->
-            <section class="content-section">
+            <section class="content-section" id="contact">
                 <div class="section-title-wrapper" onclick="toggleSection(this)">
                     <h2 class="section-title">Schedule a Consultation Today</h2>
                 </div>
                 <div class="section-content">
                     <div class="feature-list">
                         <div class="feature-item">
-                            If you're dealing with a denied or delayed storm damage insurance claim, or need representation for a serious legal issue, contact the Law Office of Thomas W. Hamrick today. Get clarity, support, and results from an experienced Texas attorney.
+                            If you're dealing with a denied or delayed storm damage insurance claim, or need representation for a serious legal issue, contact the Law Office of Thomas W. Hamrick today.<br><br> Get clarity, support, and results from an experienced Texas attorney.
                         </div>
                         <div class="feature-item">
                             Call <strong>(214) 396-7676</strong> or email <a href="mailto:hamricklaw@gmail.com">hamricklaw@gmail.com</a>
@@ -533,6 +564,22 @@
                 content.classList.add('expanded');
                 titleElement.classList.add('expanded');
             }
+        }
+
+        function scrollToContact(event) {
+            event.preventDefault();
+            const contactSection = document.getElementById('contact');
+            const titleWrapper = contactSection.querySelector('.section-title-wrapper');
+            const content = contactSection.querySelector('.section-content');
+            
+            // Scroll to the contact section
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Expand the section after a short delay to allow scrolling to complete
+            setTimeout(() => {
+                content.classList.add('expanded');
+                titleWrapper.classList.add('expanded');
+            }, 500);
         }
     </script>
 </body>
